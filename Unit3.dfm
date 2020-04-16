@@ -12,35 +12,14 @@ object Form3: TForm3
   Font.Style = []
   OldCreateOrder = False
   OnClose = FormClose
+  OnCreate = FormCreate
   PixelsPerInch = 96
   TextHeight = 13
-  object Panel1: TPanel
-    Left = 0
-    Top = 0
-    Width = 49
-    Height = 431
-    Align = alLeft
-    BevelOuter = bvNone
-    Caption = 'Panel1'
-    Color = clSilver
-    ParentBackground = False
-    ShowCaption = False
-    TabOrder = 0
-    object Button1: TButton
-      Left = 0
-      Top = 216
-      Width = 51
-      Height = 25
-      Caption = 'Button1'
-      TabOrder = 0
-      OnClick = Button1Click
-    end
-  end
   object Panel2: TPanel
     Left = 621
     Top = 0
     Width = 49
-    Height = 431
+    Height = 407
     Align = alRight
     BevelOuter = bvNone
     Caption = 'Panel1'
@@ -48,24 +27,32 @@ object Form3: TForm3
     ParentBackground = False
     ShowCaption = False
     TabOrder = 1
-    ExplicitLeft = 169
-    ExplicitTop = -8
+    ExplicitHeight = 431
+    object Next: TButton
+      Left = 6
+      Top = 372
+      Width = 35
+      Height = 35
+      Caption = '-->'
+      TabOrder = 0
+      OnClick = NextClick
+    end
   end
   object ScrollBox1: TScrollBox
     Left = 49
     Top = 0
-    Width = 570
-    Height = 431
-    Align = alLeft
+    Width = 572
+    Height = 407
+    Align = alClient
     BevelOuter = bvNone
     BorderStyle = bsNone
     TabOrder = 2
-    ExplicitLeft = 45
     object Memo1: TMemo
-      Left = 48
-      Top = 56
-      Width = 457
-      Height = 13
+      Left = 0
+      Top = 0
+      Width = 555
+      Height = 321
+      Align = alTop
       BevelInner = bvNone
       BorderStyle = bsNone
       Ctl3D = True
@@ -246,6 +233,72 @@ object Form3: TForm3
       ParentCtl3D = False
       ReadOnly = True
       TabOrder = 0
+      ExplicitLeft = 55
+      ExplicitTop = 218
+      ExplicitWidth = 455
     end
+    object Display: TPanel
+      Left = 0
+      Top = 321
+      Width = 555
+      Height = 113
+      Align = alTop
+      Caption = 'Display'
+      TabOrder = 1
+      OnClick = DisplayClick
+      ExplicitLeft = 6
+      ExplicitTop = 288
+      ExplicitWidth = 193
+    end
+  end
+  object Panel3: TPanel
+    Left = 0
+    Top = 407
+    Width = 670
+    Height = 24
+    Align = alBottom
+    BevelOuter = bvNone
+    Caption = '1/10'
+    Color = clSilver
+    ParentBackground = False
+    TabOrder = 3
+    ExplicitLeft = 216
+    ExplicitWidth = 185
+  end
+  object Panel1: TPanel
+    Left = 0
+    Top = 0
+    Width = 49
+    Height = 407
+    Align = alLeft
+    BevelOuter = bvNone
+    Caption = 'Panel1'
+    Color = clSilver
+    ParentBackground = False
+    ShowCaption = False
+    TabOrder = 0
+    ExplicitHeight = 431
+    object Back: TButton
+      Left = 8
+      Top = 372
+      Width = 35
+      Height = 35
+      Caption = '<--'
+      TabOrder = 0
+      OnClick = BackClick
+    end
+    object Home: TButton
+      Left = 8
+      Top = 148
+      Width = 35
+      Height = 35
+      Caption = '^'
+      TabOrder = 1
+      OnClick = HomeClick
+    end
+  end
+  object OpenDialog1: TOpenDialog
+    Left = 456
+    Top = 16
   end
 end
