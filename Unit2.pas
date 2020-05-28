@@ -11,6 +11,8 @@ type
     ScrollBox1: TScrollBox;
     Memo1: TMemo;
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
+    procedure FormResize(Sender: TObject);
+    procedure FormShow(Sender: TObject);
   private
     { Private declarations }
   public
@@ -29,6 +31,20 @@ uses Unit1;
 procedure TForm2.FormClose(Sender: TObject; var Action: TCloseAction);
 begin
 Form1.Show;
+end;
+
+procedure TForm2.FormResize(Sender: TObject);
+begin
+Memo1.Width:=Form2.Width-33;
+
+//owMessage(' '+ IntToStr(Form2.Width+33) +' ');
+
+end;
+
+procedure TForm2.FormShow(Sender: TObject);
+begin
+
+Memo1.Lines.LoadFromFile('BD/1.1.txt');
 end;
 
 end.
