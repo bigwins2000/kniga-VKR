@@ -11,13 +11,9 @@ type
   TForm2 = class(TForm)
     ScrollBox1: TScrollBox;
     Memo1: TMemo;
-    Image1: TImage;
-    RichEdit1: TRichEdit;
-    WebBrowser1: TWebBrowser;
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure FormResize(Sender: TObject);
     procedure FormShow(Sender: TObject);
-    procedure ScrollBox1Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -50,11 +46,6 @@ procedure TForm2.FormShow(Sender: TObject);
 begin
 
 Memo1.Lines.LoadFromFile('BD/1.1.txt');
-end;
-
-procedure TForm2.ScrollBox1Click(Sender: TObject);
-begin
-Image1.Canvas.TextOut(1,1,'rtyui');
 end;
 
 end.

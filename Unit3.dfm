@@ -27,7 +27,6 @@ object Form3: TForm3
     ParentBackground = False
     ShowCaption = False
     TabOrder = 1
-    ExplicitHeight = 431
     object Next: TButton
       Left = 6
       Top = 372
@@ -36,6 +35,42 @@ object Form3: TForm3
       Caption = '-->'
       TabOrder = 0
       OnClick = NextClick
+    end
+    object Button1: TButton
+      Left = 6
+      Top = 8
+      Width = 41
+      Height = 25
+      Caption = #1042#1080#1076#1077#1086'1'
+      TabOrder = 1
+      OnClick = Button1Click
+    end
+    object Button2: TButton
+      Left = 6
+      Top = 32
+      Width = 41
+      Height = 25
+      Caption = #1042#1080#1076#1077#1086'2'
+      TabOrder = 2
+      OnClick = Button2Click
+    end
+    object Button3: TButton
+      Left = 6
+      Top = 56
+      Width = 41
+      Height = 25
+      Caption = #1042#1080#1076#1077#1086'3'
+      TabOrder = 3
+      OnClick = Button3Click
+    end
+    object Button4: TButton
+      Left = 6
+      Top = 80
+      Width = 41
+      Height = 25
+      Caption = #1042#1080#1076#1077#1086'4'
+      TabOrder = 4
+      OnClick = Button4Click
     end
   end
   object ScrollBox1: TScrollBox
@@ -50,7 +85,7 @@ object Form3: TForm3
     object Memo1: TMemo
       Left = 0
       Top = 0
-      Width = 555
+      Width = 572
       Height = 321
       Align = alTop
       BevelInner = bvNone
@@ -233,22 +268,7 @@ object Form3: TForm3
       ParentCtl3D = False
       ReadOnly = True
       TabOrder = 0
-      ExplicitLeft = 55
-      ExplicitTop = 218
-      ExplicitWidth = 455
-    end
-    object Display: TPanel
-      Left = 0
-      Top = 321
-      Width = 555
-      Height = 113
-      Align = alTop
-      Caption = 'Display'
-      TabOrder = 1
-      OnClick = DisplayClick
-      ExplicitLeft = 6
-      ExplicitTop = 288
-      ExplicitWidth = 193
+      ExplicitWidth = 555
     end
   end
   object Panel3: TPanel
@@ -262,8 +282,6 @@ object Form3: TForm3
     Color = clSilver
     ParentBackground = False
     TabOrder = 3
-    ExplicitLeft = 216
-    ExplicitWidth = 185
   end
   object Panel1: TPanel
     Left = 0
@@ -277,7 +295,6 @@ object Form3: TForm3
     ParentBackground = False
     ShowCaption = False
     TabOrder = 0
-    ExplicitHeight = 431
     object Back: TButton
       Left = 8
       Top = 372

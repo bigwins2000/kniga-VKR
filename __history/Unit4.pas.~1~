@@ -1,0 +1,50 @@
+unit Unit4;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ExtCtrls, BASS_DSHOW, ComCtrls,
+  Vcl.StdCtrls;
+
+type
+  TForm4 = class(TForm)
+    Display: TPanel;
+    Panel1: TPanel;
+    Button1: TButton;
+    procedure Button1Click(Sender: TObject);
+    procedure FormShow(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form4: TForm4;
+  paused: boolean;
+  chan: cardinal;
+
+implementation
+
+{$R *.dfm}
+
+procedure TForm4.Button1Click(Sender: TObject);
+begin
+if(paused=false) then
+ begin
+  xVideo_ChannelPause(chan);
+  paused:=true;
+ end else
+ begin
+  xVideo_ChannelPlay(chan);
+  paused:=false;
+ end;
+end;
+
+procedure TForm4.FormShow(Sender: TObject);
+begin
+   paused:=false;
+end;
+
+end.

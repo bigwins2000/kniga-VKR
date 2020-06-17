@@ -1,15 +1,12 @@
 ﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
     <PropertyGroup>
-        <ProjectGuid>{CC983B43-2C48-4BC4-8C58-258F2B2AECE1}</ProjectGuid>
+        <ProjectGuid>{A6ABC4D5-BC1D-49DA-A2B4-1704FA0D94B9}</ProjectGuid>
     </PropertyGroup>
     <ItemGroup>
+        <Projects Include="..\..\Embarcadero\Studio\Projects\Project3.dproj">
+            <Dependencies/>
+        </Projects>
         <Projects Include="Project1.dproj">
-            <Dependencies/>
-        </Projects>
-        <Projects Include="..\..\..\Desktop\BASS_DSHOW\Delphi\Demo\demo.dproj">
-            <Dependencies/>
-        </Projects>
-        <Projects Include="..\..\..\Desktop\my_dshow\simple.dproj">
             <Dependencies/>
         </Projects>
     </ItemGroup>
@@ -20,6 +17,15 @@
             <Default.Personality/>
         </BorlandProject>
     </ProjectExtensions>
+    <Target Name="Project3">
+        <MSBuild Projects="..\..\Embarcadero\Studio\Projects\Project3.dproj"/>
+    </Target>
+    <Target Name="Project3:Clean">
+        <MSBuild Projects="..\..\Embarcadero\Studio\Projects\Project3.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Project3:Make">
+        <MSBuild Projects="..\..\Embarcadero\Studio\Projects\Project3.dproj" Targets="Make"/>
+    </Target>
     <Target Name="Project1">
         <MSBuild Projects="Project1.dproj"/>
     </Target>
@@ -29,32 +35,14 @@
     <Target Name="Project1:Make">
         <MSBuild Projects="Project1.dproj" Targets="Make"/>
     </Target>
-    <Target Name="demo">
-        <MSBuild Projects="..\..\..\Desktop\BASS_DSHOW\Delphi\Demo\demo.dproj"/>
-    </Target>
-    <Target Name="demo:Clean">
-        <MSBuild Projects="..\..\..\Desktop\BASS_DSHOW\Delphi\Demo\demo.dproj" Targets="Clean"/>
-    </Target>
-    <Target Name="demo:Make">
-        <MSBuild Projects="..\..\..\Desktop\BASS_DSHOW\Delphi\Demo\demo.dproj" Targets="Make"/>
-    </Target>
-    <Target Name="simple">
-        <MSBuild Projects="..\..\..\Desktop\my_dshow\simple.dproj"/>
-    </Target>
-    <Target Name="simple:Clean">
-        <MSBuild Projects="..\..\..\Desktop\my_dshow\simple.dproj" Targets="Clean"/>
-    </Target>
-    <Target Name="simple:Make">
-        <MSBuild Projects="..\..\..\Desktop\my_dshow\simple.dproj" Targets="Make"/>
-    </Target>
     <Target Name="Build">
-        <CallTarget Targets="Project1;demo;simple"/>
+        <CallTarget Targets="Project3;Project1"/>
     </Target>
     <Target Name="Clean">
-        <CallTarget Targets="Project1:Clean;demo:Clean;simple:Clean"/>
+        <CallTarget Targets="Project3:Clean;Project1:Clean"/>
     </Target>
     <Target Name="Make">
-        <CallTarget Targets="Project1:Make;demo:Make;simple:Make"/>
+        <CallTarget Targets="Project3:Make;Project1:Make"/>
     </Target>
     <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
 </Project>
