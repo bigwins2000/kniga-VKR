@@ -9,19 +9,48 @@ uses
 
 type
   TForm3 = class(TForm)
+    Panel4: TPanel;
+    OpenDialog1: TOpenDialog;
     Panel1: TPanel;
-    Panel2: TPanel;
-    ScrollBox1: TScrollBox;
-    Memo1: TMemo;
-    Next: TButton;
     Back: TButton;
     Home: TButton;
-    Panel3: TPanel;
-    OpenDialog1: TOpenDialog;
+    Panel2: TPanel;
+    Next: TButton;
     Button1: TButton;
     Button2: TButton;
     Button3: TButton;
     Button4: TButton;
+    Panel3: TPanel;
+    ScrollBox1: TScrollBox;
+    Memo1: TMemo;
+    Panel5: TPanel;
+    ScrollBox2: TScrollBox;
+    Label1: TLabel;
+    Label2: TLabel;
+    Label3: TLabel;
+    Label4: TLabel;
+    Label5: TLabel;
+    Label6: TLabel;
+    Label7: TLabel;
+    Label8: TLabel;
+    Label9: TLabel;
+    Label10: TLabel;
+    Label11: TLabel;
+    Label12: TLabel;
+    Label13: TLabel;
+    Label14: TLabel;
+    Label15: TLabel;
+    Label16: TLabel;
+    Label17: TLabel;
+    Label18: TLabel;
+    Label19: TLabel;
+    Label20: TLabel;
+    Label21: TLabel;
+    Label22: TLabel;
+    Label23: TLabel;
+    Label24: TLabel;
+    Label25: TLabel;
+    Label27: TLabel;
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure BackClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
@@ -31,6 +60,15 @@ type
     procedure Button3Click(Sender: TObject);
     procedure Button4Click(Sender: TObject);
     procedure Button1Click(Sender: TObject);
+    procedure Label1Click(Sender: TObject);
+    procedure Label9Click(Sender: TObject);
+    procedure Label12Click(Sender: TObject);
+    procedure Label7Click(Sender: TObject);
+    procedure Label4Click(Sender: TObject);
+    procedure Label15Click(Sender: TObject);
+    procedure Label18Click(Sender: TObject);
+    procedure Label22Click(Sender: TObject);
+    procedure Label24Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -128,7 +166,13 @@ begin
   xVideo_LoadPluginDS(PChar('{0F40E1E5-4F79-4988-B1A9-CC98794E6B55}'),PChar('FFDSHOW Audio Decoder'),0);
   xVideo_LoadPluginDS(PChar('{0F40E1E5-4F79-4988-B1A9-CC98794E6B55}'),PChar('HAALI Media Splitter'),0);
   // опции
-  xVideo_SetConfig(xVideo_CONFIG_VideoRenderer,xVideo_VMR9)
+  xVideo_SetConfig(xVideo_CONFIG_VideoRenderer,xVideo_VMR9);
+
+
+
+    Memo1.Lines.LoadFromFile('BD/1.txt');
+    Memo1.Height:=Memo1.Lines.Count*13;
+    Panel3.Caption:=(IntToStr(str) + '/' + IntToStr(strs));
 
 end;
 
@@ -152,6 +196,87 @@ begin
   Memo1.Lines.LoadFromFile('BD/' + IntToStr(str) + '.txt');
   Memo1.Height:=Memo1.Lines.Count*13;
   Panel3.Caption:=(IntToStr(str) + '/' + IntToStr(strs));
+end;
+
+procedure TForm3.Label12Click(Sender: TObject);
+begin
+str:=4;
+    Memo1.Lines.LoadFromFile('BD/4.txt');
+    Memo1.Height:=Memo1.Lines.Count*13;
+    Panel3.Caption:=(IntToStr(str) + '/' + IntToStr(strs));
+
+end;
+
+procedure TForm3.Label15Click(Sender: TObject);
+begin
+str:=7;
+    Memo1.Lines.LoadFromFile('BD/7.txt');
+    Memo1.Height:=Memo1.Lines.Count*13;
+    Panel3.Caption:=(IntToStr(str) + '/' + IntToStr(strs));
+
+end;
+
+procedure TForm3.Label18Click(Sender: TObject);
+begin
+str:=8;
+    Memo1.Lines.LoadFromFile('BD/8.txt');
+    Memo1.Height:=Memo1.Lines.Count*13;
+    Panel3.Caption:=(IntToStr(str) + '/' + IntToStr(strs));
+
+end;
+
+procedure TForm3.Label1Click(Sender: TObject);
+begin
+    str:=2;
+    Memo1.Lines.LoadFromFile('BD/2.txt');
+    Memo1.Height:=Memo1.Lines.Count*13;
+    Panel3.Caption:=(IntToStr(str) + '/' + IntToStr(strs));
+
+end;
+
+procedure TForm3.Label22Click(Sender: TObject);
+begin
+str:=9;
+    Memo1.Lines.LoadFromFile('BD/9.txt');
+    Memo1.Height:=Memo1.Lines.Count*13;
+    Panel3.Caption:=(IntToStr(str) + '/' + IntToStr(strs));
+
+end;
+
+procedure TForm3.Label24Click(Sender: TObject);
+begin
+str:=10;
+    Memo1.Lines.LoadFromFile('BD/10.txt');
+    Memo1.Height:=Memo1.Lines.Count*13;
+    Panel3.Caption:=(IntToStr(str) + '/' + IntToStr(strs));
+
+end;
+
+procedure TForm3.Label4Click(Sender: TObject);
+begin
+str:=2;
+    Memo1.Lines.LoadFromFile('BD/2.txt');
+    Memo1.Height:=Memo1.Lines.Count*13;
+    Panel3.Caption:=(IntToStr(str) + '/' + IntToStr(strs));
+
+end;
+
+procedure TForm3.Label7Click(Sender: TObject);
+begin
+str:=5;
+    Memo1.Lines.LoadFromFile('BD/5.txt');
+    Memo1.Height:=Memo1.Lines.Count*13;
+    Panel3.Caption:=(IntToStr(str) + '/' + IntToStr(strs));
+
+end;
+
+procedure TForm3.Label9Click(Sender: TObject);
+begin
+str:=3;
+    Memo1.Lines.LoadFromFile('BD/3.txt');
+    Memo1.Height:=Memo1.Lines.Count*13;
+    Panel3.Caption:=(IntToStr(str) + '/' + IntToStr(strs));
+
 end;
 
 procedure TForm3.NextClick(Sender: TObject);

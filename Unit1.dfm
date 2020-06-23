@@ -3,8 +3,8 @@ object Form1: TForm1
   Top = 0
   BorderIcons = [biSystemMenu]
   Caption = 'KNIGA'
-  ClientHeight = 180
-  ClientWidth = 222
+  ClientHeight = 165
+  ClientWidth = 200
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
